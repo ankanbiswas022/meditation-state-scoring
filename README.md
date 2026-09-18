@@ -23,8 +23,8 @@ Each session contains 5 min of eyes-open rest (EO1), 15 min of open-eyed meditat
 and then both again (EO2, M2). Eye state is therefore matched between rest and meditation,
 so a classifier cannot cheat on alpha. The first 40 % of EO1 is the person's **calibration
 segment**; every feature of every later window is z-scored against it. Scored windows are
-the rest of EO1 (label 0) and M1 (label 1), 2.5-s trials, bad trials removed by the
-published QC, bad electrodes carried as missing values.
+the rest of EO1 plus EO2 (label 0) and M1 plus M2 (label 1): 2.5-s trials, bad trials
+removed by the published QC, bad electrodes carried as missing values.
 
 ## Results (subject-wise 6-fold CV, 70 subjects, 49 590 windows)
 
@@ -58,8 +58,8 @@ controls who were meditating for the first time. That is the number this repo re
 ## Controls that make the number credible
 
 * **Absolute-feature ablation**: the same model without per-person calibration.
-* **Session transfer**: calibrate on EO1, train on other subjects' session 1, score a held-out
-  subject's EO2 vs M2. This is the deployment scenario: calibrate once, score later.
+* **Bracketed design**: rest is taken both before and after meditation, so a model cannot
+  use monotonic time-since-calibration drift as a proxy for the label.
 * **Time-on-task nulls**: rest1 vs rest2 and med1 vs med2 with the identical pipeline. If
   these are separable, the model is learning drift (gel drying, fatigue), not state.
 * **Trait check against the paper**: the per-subject median meditation score should be
