@@ -1,0 +1,179 @@
+{
+  "n_subjects": 70,
+  "n_meditators": 34,
+  "n_controls": 36,
+  "n_trials": 52374,
+  "calib_frac": 0.4,
+  "design": "rest1+rest2 vs med1+med2",
+  "main": {
+    "auc": 0.7150775206462607,
+    "balanced_accuracy": 0.5813592395704242,
+    "f1": 0.8764482431149098,
+    "brier": 0.15437607132900116,
+    "n_windows": 49590,
+    "n_subjects": 70,
+    "auc_ci95": [
+      0.6799884042151219,
+      0.7489168909843612
+    ],
+    "recording_auc": 0.7981632653061224,
+    "recording_accuracy": 0.5428571428571428,
+    "n_recordings": 140,
+    "auc_meditators": 0.7578781621103153,
+    "auc_controls": 0.6739714361623473
+  },
+  "by_group_meditators": {
+    "auc": 0.7446869318407151,
+    "balanced_accuracy": 0.6395368681545226,
+    "f1": 0.8504605909368447,
+    "brier": 0.15799531636534334,
+    "n_windows": 23864,
+    "n_subjects": 34,
+    "auc_ci95": [
+      0.6946431581704355,
+      0.7948750993043999
+    ],
+    "recording_auc": 0.8261245674740484,
+    "recording_accuracy": 0.6176470588235294,
+    "n_recordings": 68
+  },
+  "by_group_controls": {
+    "auc": 0.6689175204742608,
+    "balanced_accuracy": 0.5727611119091771,
+    "f1": 0.866638950480414,
+    "brier": 0.1633997720123205,
+    "n_windows": 25726,
+    "n_subjects": 36,
+    "auc_ci95": [
+      0.6358050037567647,
+      0.706747476044866
+    ],
+    "recording_auc": 0.7731481481481481,
+    "recording_accuracy": 0.5277777777777778,
+    "n_recordings": 72
+  },
+  "ablation_absolute": {
+    "auc": 0.5292701041211416,
+    "balanced_accuracy": 0.4974985479060534,
+    "f1": 0.8613190977999631,
+    "brier": 0.1822247730745396,
+    "n_windows": 49590,
+    "n_subjects": 70,
+    "auc_ci95": [
+      0.4984038881758575,
+      0.5593225143766243
+    ],
+    "recording_auc": 0.5385714285714286,
+    "recording_accuracy": 0.4928571428571429,
+    "n_recordings": 140
+  },
+  "ablation_invariant": {
+    "auc": 0.6364306179044746,
+    "balanced_accuracy": 0.5052809115557874,
+    "f1": 0.8714617381657651,
+    "brier": 0.16783578744459307,
+    "n_windows": 49590,
+    "n_subjects": 70,
+    "auc_ci95": [
+      0.6056481222101721,
+      0.6658594548509492
+    ],
+    "recording_auc": 0.7228571428571428,
+    "recording_accuracy": 0.5,
+    "n_recordings": 140
+  },
+  "naive_rest1_vs_med1": {
+    "auc": 0.8732005279577861,
+    "balanced_accuracy": 0.7464925673347831,
+    "f1": 0.9197803325805789,
+    "brier": 0.09858751287797503,
+    "n_windows": 23385,
+    "n_subjects": 70,
+    "auc_ci95": [
+      0.8432079639760082,
+      0.9032462679020317
+    ],
+    "recording_auc": 0.9338775510204081,
+    "recording_accuracy": 0.7642857142857142,
+    "n_recordings": 140
+  },
+  "null_rest1_vs_rest2": {
+    "auc": 0.8508455693833866,
+    "balanced_accuracy": 0.7807992630427332,
+    "f1": 0.8114109483423284,
+    "brier": 0.1574081561607635,
+    "n_windows": 11016,
+    "n_subjects": 70,
+    "auc_ci95": [
+      0.8160476403342066,
+      0.8847409984699743
+    ],
+    "recording_auc": 0.909795918367347,
+    "recording_accuracy": 0.8285714285714286,
+    "n_recordings": 140
+  },
+  "null_med1_vs_med2": {
+    "auc": 0.7338267196820148,
+    "balanced_accuracy": 0.6700309629811092,
+    "f1": 0.6624423352245612,
+    "brier": 0.20912137407163486,
+    "n_windows": 38574,
+    "n_subjects": 70,
+    "auc_ci95": [
+      0.6924757545399551,
+      0.7705514606782852
+    ],
+    "recording_auc": 0.8130612244897959,
+    "recording_accuracy": 0.7142857142857143,
+    "n_recordings": 140
+  },
+  "trait_check": {
+    "meditators_median_med_score": 87.25912651567867,
+    "controls_median_med_score": 83.03503787878788,
+    "meditators_median_delta": 12.93950352793756,
+    "controls_median_delta": 9.06573986447701,
+    "mannwhitney_p_med_score": 0.04957811587605469,
+    "mannwhitney_p_delta": 0.024030290205118644,
+    "auc_group_from_delta": 0.6572712418300654,
+    "n_meditators": 34,
+    "n_controls": 36
+  },
+  "shap_by_family": {
+    "logpow": 2.0839,
+    "relpow": 0.2877,
+    "aperiodic": 0.2274,
+    "spectral_entropy": 0.0935,
+    "hjorth": 0.0715,
+    "plv": 0.0086,
+    "asym": 0.0011,
+    "engagement": 0.0,
+    "ratio": 0.0
+  },
+  "shap_by_band": {
+    "fast_gamma": 1.5221,
+    "slow_gamma": 0.5756,
+    "other": 0.401,
+    "delta": 0.1358,
+    "theta": 0.0537,
+    "beta": 0.048,
+    "alpha": 0.0376
+  },
+  "shap_top15": {
+    "fast_gamma_logpow_AF8": 0.1742,
+    "fast_gamma_logpow_TP7": 0.1292,
+    "fast_gamma_logpow_POz": 0.1245,
+    "slow_gamma_logpow_POz": 0.1047,
+    "fast_gamma_logpow_TP9": 0.1029,
+    "slow_gamma_logpow_TP10": 0.0953,
+    "fast_gamma_logpow_PO4": 0.0878,
+    "fast_gamma_logpow_P2": 0.0819,
+    "slow_gamma_logpow_PO4": 0.0744,
+    "fast_gamma_logpow_P7": 0.0737,
+    "slow_gamma_logpow_T7": 0.0635,
+    "slow_gamma_logpow_TP7": 0.0548,
+    "aperiodic_offset_Oz": 0.0546,
+    "fast_gamma_logpow_CP6": 0.0515,
+    "fast_gamma_logpow_AF4": 0.0501
+  },
+  "seconds": 419.4
+}
